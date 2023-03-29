@@ -27,12 +27,10 @@ public:
             std::terminate();
         }
 
-        // GL 3.3 + GLSL 450
-        char const* const glsl_version = "#version 450";
+        // GL 3.0 + GLSL 130
+        char const* const glsl_version = "#version 130";
         glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-        glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-        glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-        glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+        glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
 
         window = glfwCreateWindow(
           static_cast<int>(width),

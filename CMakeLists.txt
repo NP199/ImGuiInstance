@@ -17,3 +17,5 @@ target_link_libraries(imgui_instance INTERFACE imgui::imgui)
 
 find_package(implot CONFIG REQUIRED)
 target_link_libraries(imgui_instance INTERFACE implot::implot)
+
+add_library(imgui_instance::imgui_instance imgui_instance)

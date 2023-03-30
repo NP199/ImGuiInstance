@@ -78,8 +78,6 @@ public:
 
             std::invoke(std::forward<FrameFunction>(frameFunction));
 
-            ImGui::End();
-
             ImGui::Render();
             ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
